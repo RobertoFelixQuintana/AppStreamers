@@ -1,0 +1,34 @@
+.aboutContainer{
+    width: 100%;
+    height: 90vh;
+    background-color:thistle;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.aboutContainer-superior{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.aboutContainer-inferior{
+    width: 100%;
+    height: 50vh;
+    padding: 1rem 0 1rem 0;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: var(--ColorRojo);
+}
+.aboutContainer-1,.aboutContainer-2{
+    width: 50%;
+    min-height: 40vh;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+}

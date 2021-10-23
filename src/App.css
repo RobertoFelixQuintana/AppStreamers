@@ -1,0 +1,14 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+  font-family:sans-serif;
+}
+
+:root{
+  --ColorRojo:rgba(255,0,0,255);
+  --ColorMorado:rgba(145,71,255,255);
+}
+body{
+  font-size: 16px;
+}
+
