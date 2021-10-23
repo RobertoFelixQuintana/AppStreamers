@@ -1,5 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import Login from '../Icons/Login-2.png';
+import Logo from '../Icons/Logo_2.png';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -8,8 +10,7 @@ const Navbar = () => {
             <div className="navbarContainer">
                 <div>
                     <Link to="/Inicio" className="navbar-logo" target="">
-                        <img src='Home'
-                        alt='LOGO'/>
+                        <img src={Logo} width="40rem" alt='Logo'/>
                     </Link>
                 </div>
                 <div>
@@ -32,9 +33,7 @@ const Navbar = () => {
             <div className="navbarContainer-btn">
                 <div className="sign-btn">
                     <Link to="/Sign" className="navbar-links" target="">
-                    <p id="btn-conexion">
-                        Icono IniciarSesion
-                    </p>
+                    <img id="btn-conexion" src={Login} alt="login" width="75rem"></img>
                     </Link>
                 </div>   
             </div>          

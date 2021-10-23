@@ -26,9 +26,49 @@
     padding: 1rem 0 1rem 0;
     align-items: flex-start;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
     background-color: var(--ColorRojo);
+}
+.aboutContainer-inferior-title{
+    width: 100%;
+    height: 5vh;
+    min-height: 5vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.aboutContainer-card{
+    width: 100%;
+    height: auto;
+    align-items:flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+.card{
+    width: 8rem;
+    height: 12rem;
+    background-color: blue;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    overflow: hidden;
+}
+.card-img{
+    width: 100%;
+    height: 80%;
+    background-color: yellow;
+}
+.card-description{
+    width: 100%;
+    height: 20%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: whitesmoke;
+    background-color: black;
+    font-size: .95rem;
 }
 .aboutContainer-1,.aboutContainer-2{
     width: 50%;

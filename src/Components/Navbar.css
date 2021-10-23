@@ -13,7 +13,7 @@
    font-size: 1rem;
 }
 .navbarContainer{
-    width: 75%;
+    width: 80%;
     height: auto;
     align-items: center;
     display:flex;
@@ -21,16 +21,17 @@
     text-align:center;
 }
 .navbarContainer-btn{
-    width: 25%;
-    height: auto;
+    width: 20%;
+    height:auto;
     align-items: center;
     display: flex;
-    justify-content: center;
-    text-align: center;
+    justify-content: right;
+}
+.sign-btn{
+    width: 40%;
 }
 .navbar-links{
     width:100%;
-    padding: 15px 0px;
     cursor:pointer;
     color: #F9F9F9;
     font-size: 1rem;
@@ -38,8 +39,11 @@
     letter-spacing: .05rem;
     text-transform: uppercase;
     text-decoration: none;
+    
 }
 
 .navbar-links:hover{
     color: black;
 }
+
+
