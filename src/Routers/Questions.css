@@ -1,0 +1,26 @@
+.questionsContainer{
+    width: 100%;
+    min-width: 800px;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.questionsTitle{
+    width: 100%;
+    min-height: 10vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+}
+.answersContainer{
+    width: 100%;
+    min-height: 80vh;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 2rem;
+    background-color:tomato;
+}

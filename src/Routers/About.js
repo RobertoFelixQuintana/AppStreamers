@@ -14,7 +14,11 @@ export  const About = () => {
                    </p>
                 </div>
                 <div className="aboutContainer-2">
-                   <h2>Objetivos</h2> 
+                   <h2>Objetivos</h2>
+
+                   <p>etc etc etc etc
+                   etc etc etc etc etc
+                   </p> 
                 </div> 
             </div>
  
