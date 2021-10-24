@@ -1,4 +1,5 @@
-.aboutContainer{
+.aboutContainer
+{
     width: 100%;
     min-width: 800px;
     height: 90vh;
@@ -8,19 +9,25 @@
     flex-direction: column;
     justify-content: center;
 }
-.aboutContainer-superior{
+.aboutContainer-superior
+{
     width: 100%;
+    height: 75%;
     align-items: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    /* border: 1px blue solid; */
+    padding-top: 2rem;
 }
-.aboutContainer-superior h2{
+.aboutContainer-superior h2
+{
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
-.aboutContainer-inferior{
+.aboutContainer-inferior
+{
     width: 100%;
     height: 50vh;
     padding: 1rem 0 1rem 0;
@@ -28,8 +35,9 @@
     flex-direction: column;
     align-items: center;
 }
-.aboutContainer-inferior-title{
-    width: 35%;
+.aboutContainer-inferior-title
+{
+    width: 100%;
     height: 5vh;
     min-height: 5vh;
     align-items: center;
@@ -43,7 +51,8 @@
     text-transform: uppercase;
     border-radius: 5px;
 }
-.aboutContainer-card{
+.aboutContainer-card
+{
     width: 100%;
     height: 45vh;
     align-items:center;
@@ -51,7 +60,8 @@
     flex-direction: row;
     justify-content:space-around;
 }
-.card{
+.card
+{
     width: 8rem;
     height: 12rem;
     border-radius: 10px;
@@ -61,7 +71,8 @@
     overflow: hidden;
     
 }
-.card-img{
+.card-img
+{
     width: 100%;
     height: 80%;
     align-items: center;
@@ -69,7 +80,8 @@
     justify-content: center;
     overflow: hidden;
 }
-.card-description{
+.card-description
+{
     width: 100%;
     height: 20%;
     align-items: center;
@@ -79,12 +91,126 @@
     background-color: black;
     font-size: .95rem;
 }
-.aboutContainer-1,.aboutContainer-2{
-    width: 50%;
+.entry-content
+{
+    width: 75%;
     min-height: 40vh;
     align-items: flex-start;
-    display: flex;
+    /* display: inline-flex; */
+    display:flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    padding-top: 2rem;
+    /* border: 1px black solid; */
+}
+
+.entry-header h1
+{
+    font-size: 600%;
+}
+
+.entry-header
+{
+    margin-top: 7rem;
+    width: 75%;
+    min-height: auto;
+    align-items: center;
+    display: inline-flex;
     flex-direction: column;
     justify-content:flex-start;
-    padding-left: 2rem;
+    /* border: 1px red solid; */
 }
+
+.block-column
+{
+    display:flex;
+    width: 50%;
+    height:100%;
+    /* border: 1px rgb(155, 100, 0) solid; */
+}
+
+.block-column-img
+{
+    width: 50%;
+    height:100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    /* border: 1px rgb(155, 100, 0) solid; */
+}
+
+.warpper
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tab
+{
+    cursor: pointer;
+    padding:10px 20px;
+    margin:0px 2px;
+    background:#000;
+    display:inline-block;
+    color:#fff;
+    border-radius:3px 3px 0px 0px;
+    box-shadow: 0 0.5rem 0.8rem #00000080;
+}
+
+.panels
+{
+    background:#fffffff6;
+    box-shadow: 0 2rem 2rem #00000080;
+    min-height:200px;
+    width:100%;
+    max-width:500px;
+    border-radius:3px;
+    overflow:hidden;
+    padding:20px;  
+}
+
+.panel
+{
+    display:none;
+    animation: fadein .8s;
+}
+
+@keyframes fadein 
+{
+    from 
+    {
+        opacity:0;
+    }
+    to 
+    {
+        opacity:1;
+    }
+}
+
+.panel-title
+{
+    font-size:1.5em;
+    font-weight:bold
+}
+
+.radio
+{
+    display:none;
+}
+
+#one:checked ~ .panels #one-panel,
+#two:checked ~ .panels #two-panel,
+#three:checked ~ .panels #three-panel
+    {
+        display:block
+    }
+
+#one:checked ~ .tabs #one-tab,
+#two:checked ~ .tabs #two-tab,
+#three:checked ~ .tabs #three-tab
+    {
+        background:#fffffff6;
+        color:#000;
+        border-top: 3px solid #000;
+    }

@@ -1,0 +1,35 @@
+  .tab-panel__header {
+    font-family: 'Trebuchet MS';
+    font-size: 1rem;
+    position: relative;
+    top: 1px;
+    bottom: 2rem;
+  }
+
+  .tab {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    padding: 6px 24px;
+    position: relative;
+    text-transform: uppercase;
+    z-index: 0;
+  }
+  
+  .tab:nth-child(n+2) {
+      margin-left: -8px;
+  }
+  
+  .tab:hover {
+    color: black;
+    background-color: #CCC;
+  }
+  
+  .tab--selected {
+    background-color: gray;
+    color:black;
+    font-weight: bold;
+    padding-top: 6px;
+    z-index: 1;
+  }
