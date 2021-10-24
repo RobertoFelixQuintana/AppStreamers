@@ -1,36 +1,32 @@
 import React from 'react';
 import './About.css';
+import NavAbout from '../Components/TabAbout';
 import Roberto from '../Img/Roberto.jpg';
 import Kevin from '../Img/Kevin.png';
 import Oscar from '../Img/Oscar.jpg';
+import CreadorContenido from '../Img/CreadorContenido.png';
 
 export  const About = () => {
     return (
         <div className="aboutContainer">
             <div className="aboutContainer-superior">
-                <div className="aboutContainer-1">
-                   <h2>Mision</h2> 
-                   <p>
-                       jkdkajsdjkaskdna<br></br>
-                       segundo
-                       Kevin Estuvo Aquí para la Mezcla
-                   </p>
-                   <h2>Vision</h2>
-
+                <div className="entry-header">
+                    <h1>Mision, Visión y Objetivos</h1>
                 </div>
-                <div className="aboutContainer-2">
-                   <h2>Objetivos Generales</h2>
-
-                   <p>etc etc etc etc
-                   etc etc etc etc etc
-                   </p> 
+                <div className="entry-content"> 
+                    <div className="block-column">
+                        <NavAbout/>
+                    </div>
+                    <div className="block-column-img">
+                        <img width="350rem" src={CreadorContenido} alt="Creador de Contenido"></img>
+                    </div>
                 </div> 
             </div>
  
             <div className="aboutContainer-inferior">
                 <div className="aboutContainer-inferior-title">
-                    <h2>Integrantes</h2> 
-                </div>
+                    <h2>Integrantes</h2>
+               </div>
                <div className="aboutContainer-card">
                     <div className="card">
                         <div className="card-img">
@@ -59,7 +55,7 @@ export  const About = () => {
                             <p><strong>Kevin Itzay</strong></p>
                         </div> 
                     </div>
-               </div>
+                </div>
             </div>
             
         </div>
