@@ -9,12 +9,13 @@ export  const About = () => {
         <div className="aboutContainer">
             <div className="aboutContainer-superior">
                 <div className="aboutContainer-1">
-                   <h2>Mision y Vision</h2> 
-
+                   <h2>Mision</h2> 
                    <p>
                        jkdkajsdjkaskdna<br></br>
                        segundo
                    </p>
+                   <h2>Vision</h2>
+
                 </div>
                 <div className="aboutContainer-2">
                    <h2>Objetivos Generales</h2>

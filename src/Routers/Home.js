@@ -5,7 +5,7 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <p>Este es el home</p>
+                <p>Este es el home prro</p>
             </div>
         )
     }
