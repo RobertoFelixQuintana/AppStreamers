@@ -9,18 +9,25 @@ const Questions = () => {
             </div>
             <div className="answersContainer">
                 <div>
-                    <p>                    
-                        Preguntas y respuesta
+                    <p>
+                        <strong>
+                            Preguntas y respuesta
+                        </strong> 
                     </p>
                 </div>
                 <div>
-                    <p>                    
-                        Preguntas y respuesta
+                    <p>  
+                        <strong>
+                            Preguntas y respuesta
+                        </strong>
+                        
                     </p>
                 </div>
                 <div>
-                    <p>                    
-                        Preguntas y respuesta
+                    <p> 
+                        <strong>
+                          Preguntas y respuesta  
+                        </strong>
                     </p>
                 </div>
             </div>

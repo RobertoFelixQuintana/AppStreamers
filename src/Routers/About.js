@@ -1,5 +1,8 @@
 import React from 'react';
 import './About.css';
+import Roberto from '../Img/Roberto.jpg';
+import Kevin from '../Img/Kevin.png';
+import Oscar from '../Img/Oscar.jpg';
 
 export  const About = () => {
     return (
@@ -14,7 +17,7 @@ export  const About = () => {
                    </p>
                 </div>
                 <div className="aboutContainer-2">
-                   <h2>Objetivos</h2>
+                   <h2>Objetivos Generales</h2>
 
                    <p>etc etc etc etc
                    etc etc etc etc etc
@@ -29,7 +32,7 @@ export  const About = () => {
                <div className="aboutContainer-card">
                     <div className="card">
                         <div className="card-img">
-                            <span>foto1</span>
+                            <img src={Roberto} alt="roberto" width="150rem"></img>
                         </div>
                         
                         <div className="card-description">
@@ -38,7 +41,7 @@ export  const About = () => {
                     </div>
                     <div className="card">
                         <div className="card-img">
-                            <span>foto1</span>
+                            <img src={Oscar} alt="roberto" width="160rem"></img>
                         </div>
                         
                         <div className="card-description">
@@ -47,7 +50,7 @@ export  const About = () => {
                     </div>
                     <div className="card">
                         <div className="card-img">
-                            <span>foto1</span>
+                            <img src={Kevin} alt="roberto" width="140rem"></img>
                         </div>
                         
                         <div className="card-description">

@@ -1,6 +1,7 @@
 .questionsContainer{
     width: 100%;
     min-width: 800px;
+    height: fit-content;
     min-height: 90vh;
     display: flex;
     flex-direction: column;
@@ -12,7 +13,6 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    background-color: aqua;
 }
 .answersContainer{
     width: 100%;
