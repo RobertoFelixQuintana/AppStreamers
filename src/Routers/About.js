@@ -14,7 +14,7 @@ export  const About = () => {
                    <p>
                        jkdkajsdjkaskdna<br></br>
                        segundo
-                       Kevin Estuvo Aquí
+                       Kevin Estuvo Aquí para la Mezcla
                    </p>
                 </div>
                 <div className="aboutContainer-2">
