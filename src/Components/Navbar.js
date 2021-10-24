@@ -33,7 +33,7 @@ const Navbar = () => {
             <div className="navbarContainer-btn">
                 <div className="sign-btn">
                     <Link to="/Sign" className="navbar-links-btn" target="">
-                    <img src={Login} alt="login" width="75rem"></img>
+                    <img src={Login} alt="login" width="90rem"></img>
                     </Link>
                 </div>   
             </div>          
