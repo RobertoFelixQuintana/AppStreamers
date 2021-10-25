@@ -30,7 +30,7 @@ export  const About = () => {
                <div className="aboutContainer-card">
                     <div className="card">
                         <div className="card-img">
-                            <img src={Roberto} alt="roberto" width="150rem"></img>
+                            <img src={Roberto} alt="roberto" width="170rem"></img>
                         </div>
                         
                         <div className="card-description">
@@ -39,7 +39,7 @@ export  const About = () => {
                     </div>
                     <div className="card">
                         <div className="card-img">
-                            <img src={Oscar} alt="roberto" width="160rem"></img>
+                            <img src={Oscar} alt="roberto" width="200rem"></img>
                         </div>
                         
                         <div className="card-description">
@@ -48,7 +48,7 @@ export  const About = () => {
                     </div>
                     <div className="card">
                         <div className="card-img">
-                            <img src={Kevin} alt="roberto" width="140rem"></img>
+                            <img src={Kevin} alt="roberto" width="170rem"></img>
                         </div>
                         
                         <div className="card-description">

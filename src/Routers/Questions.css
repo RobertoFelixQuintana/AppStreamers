@@ -28,11 +28,15 @@
     7px 6px 1px #cccccc;
   color: #444444;
 }
-/* .answersContainer {
+.answersContainer {
   font-size: 0.5rem;
-} */
+} 
 
-/* TEXT CSS*/
+.in {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
 .row {
   display: flex;
 }
@@ -42,7 +46,6 @@
 .row .col:last-child {
   margin-left: 1em;
 }
-/* Accordion styles */
 .tabs {
   border-radius: 8px;
   overflow: hidden;
@@ -50,7 +53,7 @@
   width: 60%;
   margin: 0 auto;
 }
-.tab {
+.tab-cont {
   width: 100%;
   color: white;
   overflow: hidden;
@@ -62,7 +65,6 @@
   background: #2c3e50;
   font-weight: bold;
   cursor: pointer;
-  /* Icon */
 }
 .tab-label:hover {
   background: #1a252f;
@@ -92,13 +94,13 @@
 .tab-close:hover {
   background: #1a252f;
 }
-input:checked + .tab-label {
+.in:checked + .tab-label {
   background: #1a252f;
 }
-input:checked + .tab-label::after {
+.in:checked + .tab-label::after {
   transform: rotate(90deg);
 }
-input:checked ~ .tab-content {
+.in:checked ~ .tab-content {
   max-height: 100vh;
   padding: 1em;
 }

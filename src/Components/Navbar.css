@@ -40,6 +40,7 @@
 }
 .sign-btn:hover{
     background-color: #fff;
+    transform: scale(1.1);
 }
 .navbar-links{
     width:100%;

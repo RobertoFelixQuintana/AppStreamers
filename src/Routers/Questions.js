@@ -42,16 +42,18 @@ const Questions = () => {
       <div className="answersContainer">
         <div className="tabs">
           {Preguntas.map((e) => (
-            <div className="tab">
-              <input type="radio" id={e.id} name="rd"></input>
+            <div className="tab-cont">
+              <input className="in" type="radio" id={e.id} name="rd"></input>
               <label className="tab-label" for={e.id}>
-                {e.preg}
+                <p className="tab-p1">{e.preg}</p>
               </label>
-              <div className="tab-content">{e.resp}</div>
+              <div className="tab-content">
+                <p className="tab-p2">{e.resp}</p>
+              </div>
             </div>
           ))}
           <div class="tab">
-            <input type="radio" id="rd7" name="rd" />
+            <input className="in" type="radio" id="rd7" name="rd" />
             <label for="rd7" class="tab-close">
               Close others &times;
             </label>
