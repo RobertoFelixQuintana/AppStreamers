@@ -4,7 +4,7 @@ import "./Questions.css";
 const Questions = () => {
   const Preguntas = [
     {
-      id: "rd1",
+      id: "chck1",
       preg: "1.¿Somos promocionados por alguna compañia en especifico?",
       resp: "lorem isup",
     },
@@ -40,24 +40,18 @@ const Questions = () => {
         <h1 className="questionsTitleH1">Preguntas frecuentes</h1>
       </div>
       <div className="answersContainer">
-        <div className="tabs">
+        <div className="tabsQ">
           {Preguntas.map((e) => (
-            <div className="tab-cont">
-              <input className="in" type="radio" id={e.id} name="rd"></input>
-              <label className="tab-label" for={e.id}>
+            <div className="tabQ">
+              <input className="inQ" type="checkbox" id={e.id} name="rd"></input>
+              <label className="tab-labelQ" for={e.id}>
                 <p className="tab-p1">{e.preg}</p>
               </label>
-              <div className="tab-content">
+              <div className="tab-contentQ">
                 <p className="tab-p2">{e.resp}</p>
               </div>
             </div>
           ))}
-          <div class="tab">
-            <input className="in" type="radio" id="rd7" name="rd" />
-            <label for="rd7" class="tab-close">
-              Close others &times;
-            </label>
-          </div>
         </div>
       </div>
     </div>

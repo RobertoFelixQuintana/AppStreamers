@@ -36,10 +36,10 @@
     justify-content: center; 
     cursor:pointer;
     border-radius: 5px;
-    background-color: var(--ColorRojo);
+    background-color: #fff;
 }
 .sign-btn:hover{
-    background-color: #fff;
+    background-color: #ccc;
     transform: scale(1.1);
 }
 .navbar-links{
