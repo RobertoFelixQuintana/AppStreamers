@@ -6,7 +6,7 @@ const FormValidation = (props) => {
         setEmail, 
         password ,
         setPassword,
-        HandleLoguin,
+        HandleLogin,
         HandleLogout,
         HandleSignup,
         hasAccount,
@@ -58,7 +58,7 @@ const FormValidation = (props) => {
                 <div className='container-btn'>
                     {hasAccount ? (
                         <>
-                        <button onClick={HandleLoguin}>Login</button>
+                        <button onClick={HandleLogin}>Login</button>
                         
                         <p>Dont have account <span onClick={() => setHasAccount(!hasAccount)}>Sign up</span></p>
                         </>

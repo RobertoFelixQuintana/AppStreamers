@@ -1,17 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { initializeApp } from "firebase/app";
+import fire from '../Firebase/FirebaseConfig';
 import FormValidation from '../Components/FormValidation';
-
-const firebaseConfig = {
-    apiKey: "AIzaSyB1T-KW6PHMzQOTDsrBpugVH8VFLG-z0fY",
-    authDomain: "app-streamers.firebaseapp.com",
-    projectId: "app-streamers",
-    storageBucket: "app-streamers.appspot.com",
-    messagingSenderId: "730998423671",
-    appId: "1:730998423671:web:4b2573a3acce7908cb4672",
-    measurementId: "G-1N91WXKSBR"
-};
-const app = initializeApp(firebaseConfig);
+import 'firebase/compat/auth';
 
 const Verification = () => {
     const[user, setUser] = useState('')
@@ -19,7 +9,7 @@ const Verification = () => {
     const[password, setPassword] = useState('')
     const[emailError, setEmailError] = useState('')
     const[passwordError, setPasswordError] = useState('')
-    const[hasAccount, setHasAccount] = useState(true)
+    const[hasAccount, setHasAccount] = useState(false)
 
     //Limpia entradas
     const clearInputs = () => {
@@ -35,7 +25,7 @@ const Verification = () => {
     const HandleLogin = () =>{
       ClearErrors();
       document.getElementById("btn-conexion").innerText="Log Out";
-      app.auth().signInWithEmailAndPassword(email, password)
+      fire.auth().signInWithEmailAndPassword(email, password)
            .catch(err => {
              switch(err.code){
                case "auth/invalid-email":
@@ -52,7 +42,7 @@ const Verification = () => {
 
     const HandleSignup = () =>{
       ClearErrors();
-      app.auth().createUserWithEmailAndPassword(email, password)
+      fire.auth().createUserWithEmailAndPassword(email, password)
       
            .catch(err => {
              switch(err.code){
@@ -68,11 +58,11 @@ const Verification = () => {
     }
 
     const HandleLogout = () => {
-      app.auth().signOut();
+      fire.auth().signOut();
       document.getElementById("btn-conexion").innerHTML="Sign in";  
     }
     const authListener = () => {
-      app.auth().onAuthStateChanged((user)=> {
+      fire.auth().onAuthStateChanged((user)=> {
         if(user){
           clearInputs();
           setUser(user)
@@ -90,6 +80,7 @@ const Verification = () => {
     return (
       
         <div>
+            <h1>Seccion de Hola</h1>
           {user ? (
             <p>Ya estas logeado</p>
           ):(
