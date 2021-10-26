@@ -26,6 +26,7 @@
 }
 .containerBannerForm{
     width: 30%;
+    min-width: 20rem;
     height: 90vh;
     align-items: center;
     display: flex;

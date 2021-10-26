@@ -1,6 +1,5 @@
 import React from 'react';
 import './FormValidation.css';
-import Swal from 'sweetalert2'
 
 const FormValidation = (props) => {
     const {
@@ -14,43 +13,12 @@ const FormValidation = (props) => {
         setHasAccount,
         emailError,
         passwordError,
+        Plan1,
+        Plan2,
+        Plan3,
+        Plan4
     } = props;
-    const Plan1 =()=>{
-        Swal.fire({
-            position: 'center',
-            icon: 'success',
-            title: 'Usted a comprado el plan 1 como usuario',
-            showConfirmButton: true,
-            timer: 3000
-        }) 
-    }
-    const Plan2 =()=>{
-        Swal.fire({
-            position: 'center',
-            icon: 'success',
-            title: 'Usted a comprado el plan 2 como usuario',
-            showConfirmButton: true,
-            timer: 3000
-        }) 
-    }
-    const Plan3 =()=>{
-        Swal.fire({
-            position: 'center',
-            icon: 'success',
-            title: 'Usted a comprado el plan 1 como patrocinador',
-            showConfirmButton: true,
-            timer: 3000
-        }) 
-    }
-    const Plan4 =()=>{
-        Swal.fire({
-            position: 'center',
-            icon: 'success',
-            title: 'Usted a comprado el plan 2 como patrocisuccess',
-            showConfirmButton: true,
-            timer: 3000
-        }) 
-    }
+
     return (   
         <div className='containerFormData'>
             <div className="Formulario">

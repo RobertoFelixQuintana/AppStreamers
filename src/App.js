@@ -14,7 +14,7 @@ export class App extends Component {
         <HashRouter basename="/">
           <Navbar/>
           <Switch>
-            <Route path='/Inicio' exact component={Home}/>
+            <Route path='/Inicio'  exact component={Home}/>
             <Route path='/QuienesSomos' exact component={About}/>
             <Route path='/PreguntasFrecuentes' exact component={Questions}/>
             <Route path='/Perfil' exact component={Verification}/>
