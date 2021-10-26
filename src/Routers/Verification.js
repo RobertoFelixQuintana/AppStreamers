@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import fire from '../Firebase/FirebaseConfig';
 import FormValidation from '../Components/FormValidation';
 import 'firebase/compat/auth';
+import FormData from '../Components/FormData';
+import Swal from 'sweetalert2'
+
 
 const Verification = () => {
     const[user, setUser] = useState('')
@@ -9,7 +12,7 @@ const Verification = () => {
     const[password, setPassword] = useState('')
     const[emailError, setEmailError] = useState('')
     const[passwordError, setPasswordError] = useState('')
-    const[hasAccount, setHasAccount] = useState(false)
+    const[hasAccount, setHasAccount] = useState(true)
 
     //Limpia entradas
     const clearInputs = () => {
@@ -24,79 +27,84 @@ const Verification = () => {
 
     const HandleLogin = () =>{
       ClearErrors();
-      document.getElementById("btn-conexion").innerText="Log Out";
+      clearInputs();
       fire.auth().signInWithEmailAndPassword(email, password)
-           .catch(err => {
-             switch(err.code){
-               case "auth/invalid-email":
-               case "auth/user-disabled":
-               case "auth/user-not-found":
-                    setEmailError(err.message);
-                    break;
-               case "auth/wrong-password":
-                    setPasswordError(err.message)
-                    break;
-             }
-           })
+      .then(()=>{
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Has iniciado sesion correctamente',
+          showConfirmButton: true,
+          timer: 3000
+        }) 
+      })
+      .catch((error) => {
+        Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: 'Usuario o contraseña incorrecto',
+            showConfirmButton: false,
+            timer: 3000
+        }) 
+      });
     }
 
     const HandleSignup = () =>{
       ClearErrors();
-      fire.auth().createUserWithEmailAndPassword(email, password)
       
-           .catch(err => {
-             switch(err.code){
-               case "auth/email-already-in-use":
-               case "auth/invalid-email":
-                    setEmailError(err.message);
-                    break;
-               case "auth/weak-password":
-                    setPasswordError(err.message)
-                    break;
-             }
-           })
+      fire.auth().createUserWithEmailAndPassword(email, password)
+      .then(()=>{
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Has creado una cuenta con exito',
+          showConfirmButton: true,
+          timer: 3000
+        }) 
+      })
+      .catch((error) => {
+        Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: 'Usuario ya existente o incorrecto',
+            showConfirmButton: false,
+            timer: 3000
+        }) 
+      });
     }
-
-    const HandleLogout = () => {
-      fire.auth().signOut();
-      document.getElementById("btn-conexion").innerHTML="Sign in";  
-    }
-    const authListener = () => {
-      fire.auth().onAuthStateChanged((user)=> {
-        if(user){
-          clearInputs();
-          setUser(user)
-        }else{
-          setUser("")
-        }
-       }
-     )
-    }
-
     useEffect(() => {
+      const authListener = () => {
+        fire.auth().onAuthStateChanged((user)=> {
+          if(user){
+            clearInputs();
+            setUser(user)
+            document.getElementById("Log").innerText="Logout";
+          }else{
+            setUser("")
+            document.getElementById("Log").innerText="Login";
+          }
+         }
+       )
+      }
       authListener();
-    
     }, [])
     return (
       
         <div>
-            <h1>Seccion de Hola</h1>
           {user ? (
-            <p>Ya estas logeado</p>
+            <FormData/>
           ):(
             <FormValidation
              email={email}
              setEmail={setEmail}
              password={password}
              setPassword={setPassword}
-             HandleLoguin={HandleLogin}
-             HandleLogout={HandleLogout}
+             HandleLogin={HandleLogin}
              HandleSignup={HandleSignup}
              hasAccount={hasAccount}
              setHasAccount={setHasAccount}
              emailError={emailError}
-             passwordError={passwordError}
-             
+             passwordError={passwordError}           
           />
           )}
           

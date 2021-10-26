@@ -15,7 +15,7 @@ class NavAbout extends React.Component {
     render() {
         return (
           <TabPanel onTabChange={this._handleTabChange}>
-            <div title="Misión">
+            <div className="text" title="Misión">
                 <h2>Misión</h2>
                 <p>
                     Ayudar a pequeños streamers y 

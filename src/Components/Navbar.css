@@ -26,35 +26,56 @@
     height:10vh;
     align-items: center;
     display: flex;
-    justify-content: center;
+    justify-content:space-evenly;
 }
-.sign-btn{
-    width: auto;
-    height: 1.4rem;
+.sign-btn-Login{
+    width: 30%;
+    height: 100%;
     align-items: center;
     display: flex;
     justify-content: center; 
-    cursor:pointer;
-    border-radius: 5px;
-    background-color: #fff;
+    cursor: pointer;
 }
-.sign-btn:hover{
-    background-color: #ccc;
+.sign-btn-Login:hover{    
     transform: scale(1.1);
 }
+.sign-btn{
+    width: 40%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center; 
+    cursor: pointer;
+}
+
 .navbar-links{
     width:100%;
     cursor:pointer;
-    color: #F9F9F9;
-    font-size: 1rem;
-    font-weight: 700;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 600;
     letter-spacing: .05rem;
     text-transform: uppercase;
     text-decoration: none; 
 }
-
 .navbar-links:hover{
-    color: black;
+    color: #F9F9F9;
+}
+
+.btnLogin{
+    background-color: black;
+    color: #F9F9F9;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: .4rem .8rem;
+    border-radius: 4px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+.btnLogin:hover{
+    background-color:dimgrey;
+    transform: scale(1.1);
 }
 
 

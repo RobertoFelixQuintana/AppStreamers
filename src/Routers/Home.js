@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Home.css';
-import Kevin from '../Img/Kevin.png';
+import Swal from 'sweetalert2'
+
 
 class Home extends Component {
     
@@ -23,7 +24,7 @@ class Home extends Component {
               sexo:"Hombre",
               apoyo:15000,
               aficion:"Streamer",
-              url:"https://eststatic.com/2676/conversions/malas-personas-social.jpg",
+              url:"https://img.freepik.com/foto-gratis/concepto-emociones-personas-foto-cabeza-hombre-guapo-aspecto-serio-barba-confiado-decidido_1258-26730.jpg?size=626&ext=jpg",
               width:"250rem",
             },
             {
@@ -41,17 +42,17 @@ class Home extends Component {
               nombre: "Pepe",
               edad: 19,
               sexo:"Hombre",
-              apoyo:15000,
+              apoyo:11000,
               aficion:"Creador de contenido/Streamer",
               url:"https://lamenteesmaravillosa.com/wp-content/uploads/2018/09/hombre-creido-pensando-que-sabe.jpg",
               width:"230rem",
             },
             {
               id: "5",
-              nombre: "Puff",
+              nombre: "Mariana",
               edad: 20,
               sexo:"Mujer",
-              apoyo:15000,
+              apoyo:22000,
               aficion:"Streamer",
               url:"https://img.huffingtonpost.com/asset/5f063bac1f00003d07337b92.jpeg?ops=scalefit_720_noupscale",
               width:"270rem",
@@ -68,10 +69,10 @@ class Home extends Component {
             },
             {
                 id: "7",
-                nombre: "Max",
+                nombre: "Luisa",
                 edad: 23,
                 sexo:"Hombre",
-                apoyo:16000,
+                apoyo:19000,
                 aficion:"Creador de contenido",
                 url:"https://media.discordapp.net/attachments/900151915965468713/901983315874181120/imagen_2021-10-24_165805.png?width=465&height=310",
                 width:"290rem",
@@ -79,9 +80,9 @@ class Home extends Component {
               {
                 id: "8",
                 nombre: "Ricardo",
-                edad: 23,
+                edad: 43,
                 sexo:"Hombre",
-                apoyo:16000,
+                apoyo:27000,
                 aficion:"Creador de contenido",
                 url:"https://media.discordapp.net/attachments/900151915965468713/901984123256733746/imagen_2021-10-24_170200.png?width=465&height=465",
                 width:"290rem",
@@ -97,6 +98,16 @@ class Home extends Component {
                 width:"290rem",
               },
           ];
+          
+          const Seguir = ()=>{
+            Swal.fire({
+              position: 'center',
+              icon: 'success',
+              title: 'Usted sigue a esta persona',
+              showConfirmButton: false,
+              timer: 3000
+            }) 
+          }
         return (
             <div className="homeContainer">
                 <div className="profileBox">
@@ -122,7 +133,7 @@ class Home extends Component {
                             </div>
                             <div className="home-card-btn">
                                  <button className="card-button negro" type="button">Perfil</button>
-                                 <button className="card-button azul" type="button">Seguir</button>
+                                 <button className="card-button azul" onClick={Seguir} type="button">Seguir</button>
                             </div>
                         </div>
 

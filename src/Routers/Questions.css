@@ -2,41 +2,45 @@
   background-color:rgb(236, 240, 241);
   width: 100%;
   min-width: 800px;
-  height: fit-content;
   min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-bottom: 2rem;
 }
 
 .questionsTitle {
   width: 100%;
-  min-height: 10vh;
+  height: 20vh;
   align-items: center;
   display: flex;
   justify-content: center;
 }
 
 .questionsTitleH1 {
-  margin-bottom: 3.5rem;
-  color: #444444;
-  font-size: 4rem;
+  color: black;
+  font-size: 3rem;
   text-shadow: 1px 0px 1px #cccccc, 0px 1px 1px #eeeeee, 2px 1px 1px #cccccc,
     1px 2px 1px #eeeeee, 3px 2px 1px #cccccc, 2px 3px 1px #eeeeee,
     4px 3px 1px #cccccc, 3px 4px 1px #eeeeee, 5px 4px 1px #cccccc,
     4px 5px 1px #eeeeee, 6px 5px 1px #cccccc, 5px 6px 1px #eeeeee,
     7px 6px 1px #cccccc;
-  color: #444444;
 }
 .answersContainer {
+  padding-top: 2rem;
+  width: 100%;
+  min-height: 70vh;
   font-size: 1rem;
+  padding-bottom: 2rem;
 } 
 
 .inQ {
   position: absolute;
   opacity: 0;
   z-index: -1;
+}
+.tabQ p{
+  font-weight: 600;
+  font-family:sans-serif;
 }
 .row {
   display: flex;
@@ -54,6 +58,7 @@
   box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
   width: 60%;
   margin: 0 auto;
+  position: relative;
 }
 .tabQ {
   width: 100%;
