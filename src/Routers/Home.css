@@ -2,6 +2,7 @@
     width: 100%;
     min-width: 800px;
     min-height: fit-content;
+    background-color:rgb(236, 240, 241);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -11,9 +12,9 @@
     margin-top: 2rem;
     width: 90%;
     height: 2rem;
-    background-color: var(--ColorMorado);
-    color: #fff;
-    border: 2px solid black;
+    background-color: #D2A2CC;
+    color: black;
+    border: 1px solid black;
     padding-top: .5rem;
     padding-bottom: .5rem;
     padding-left: 1rem;
@@ -22,15 +23,16 @@
     justify-content: left;
     border-radius: 4px;
     letter-spacing: .1rem;
+    text-transform: uppercase;
 }
 .separator{
     margin-top: 2rem;
     margin-bottom: 2rem;
     width: 90%;
     height: 2rem;
-    background-color: var(--ColorMorado);
+    background-color: #D2A2CC;
     color: #fff;
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 4px;
 }
 .homeContainer-profile{
@@ -43,7 +45,7 @@
 }
 .home-profile{
     width: 13%;
-    height: 18rem;
+    min-height: fit-content;
     border-radius: 4px;
     border-width: 2px;
     border-style: solid;
@@ -87,7 +89,7 @@
 .home-card-name{
     width: 100%;
     height: 10%;
-    font-size: .8rem;
+    font-size: 1rem;
     font-weight:bold;
     border-top: 2px solid black;
     color: #fff;
@@ -102,15 +104,17 @@
     width: 100%;
     height: 40%;
     font-size: .8rem;
+    letter-spacing: .03rem;
     border-top: 2px solid black;
-    background-color: var(--ColorMorado);
-    color:black;
+    background-color: #d8acfc;
+    color:#191919;
     align-items:center;
     text-align:center;
     display: flex;
     flex-direction: column;
     justify-content:space-around;
 }
+
 .home-card-img >img{
     min-width:100%;
     min-height: 100%;
